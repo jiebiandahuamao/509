@@ -3,8 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>hello</title>
+    <style>
+        .top{
+            color: red;
+            text-align: center;
+            }
+        .center{
+            margin-top: 50px;
+            color: cadetblue;
+        }
+        .buttom{
+            margin-top: 50px;
+            text-align: right;
+        }
+    </style>
 </head>
 <body>
-    well come to 509!!
+    <div class="top">
+        <h1>well come to 509!!</h1>
+        <a href="http://172.18.11.238:8000/takepic/">
+        <button  type="submit" id="btn" onclick="btn()">拍照</button>
+        </a>
+    </div>
+    <div>
+        <p>phone pic</p>
+        <a href="http://172.18.11.238:8000/phone/">
+            <button  type="submit" id="btn" onclick="btn()">手机端</button>
+        </a>
+    </div>
+    <div class="center">
+        在使用OpenCV保存图片时会出现问题，opencv_world300.dll处引发异常，尝试不同的opencv版本依旧出现此问题
+        后查看imwrite函数教程发现使用不规范。按照规范的imwrite函数例程，可以解决这一问题。在使用OpenCV保存图片时会出现问题，opencv_worl异常尝试不同的        尝试不同的opencv版本依旧出现此问题后查看imwrite函数教程发现使用不规范。按照规范的imwrite函数例程，可以解决这一问题。
+    </div>
+    <div class="buttom">
+
+        <a href="http://172.18.11.238:8000/test/"><span>move to test page</span></a>
+    </div>
+
+
 </body>
 </html>

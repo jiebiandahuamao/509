@@ -1,3 +1,4 @@
+#-*- coding:utf8 -*-
 from app_frontend import app
 
 import signal

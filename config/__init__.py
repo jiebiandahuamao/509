@@ -1,3 +1,4 @@
+#-*- coding:utf8 -*-
 def get_env():
     """
     获取运行环境
