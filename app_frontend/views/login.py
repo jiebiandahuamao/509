@@ -87,7 +87,7 @@
 #-*- coding:utf8 -*-
 from flask import Blueprint, request, render_template
 from app_frontend import app
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 import cv2
 import numpy as np
 

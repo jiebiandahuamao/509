@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block content_header %}
+<h1>upload</h1>
+{% endblock %}
+{% block content_body %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<div class="callout callout-success">
+    <ul>
+        {% for message in messages %}
+        <li><h4>{{ message }}</h4></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+{% endwith %}
+    <style>
+    .pic{margin-top: 50px;
+        {#background-color: red;#}
+        height:300px;
+        width:100%;
+    }
+    .pic .left_pic{
+        {#float: right;#}
+        background-color: green;
+        height: 300px;
+        width: 300px;
+    }
+    .pic .right_pic{
+        {#float: right;#}
+        background-color: yellow;
+        height: 300px;
+        width: 300px;
+        display: inline-block;
+        margin-left: 100px;
+
+    }
+    .pic div img{
+        display: inline;
+        text-align:center
+    }
+
+
+    </style>
+<div class="box">
+    <form action="{{ url_for('upload') }}" method="post" enctype=multipart/form-data>
+        <div class="box-body">
+            <div class="form-group">
+                <label>上传图片</label>
+{#                <select class="form-control" name="scrapyd_server_index">#}
+{#                    <option value="{{ index_of_servers }}">{{ scrapyd_server }}</option>#}
+{#                </select>#}
+            </div>
+            <div class="form-group">
+                <label for="egg-file"><h4>请选择合适的图片进行操作 </h4></label>
+                <input type="file" name="file" id="egg-file">
+
+                <p class="help-block">注意：<a href="#" target="_blank">相关注意内容</a></p>
+            </div>
+        </div>
+        <div class="box-footer">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+{#    start#}
+    <div class="pic">
+        <div class="left_pic img-thumbnail">
+            <img src="/static/pic/gg.png" class="img-thumbnail">
+        </div>
+        <div class="right_pic img-thumbnail">
+            <img src="/static/pic/gg.png" class="img-thumbnail">
+        </div>
+    </div>
+{#end#}
+</div>
+
+{% endblock %}
